@@ -118,7 +118,7 @@ app.post("/contact", async (req, res) => {
       `,
     });
 
-    res.status(200).json({ success: true, message: "Emails sent successfully via Resend!" });
+    res.status(200).json({ success: true, message: `Emails sent successfully via Resend!  ${name}` });
   } catch (error) {
     console.error("Resend Email error:", error);
     res.status(500).json({ error: "Failed to send emails", details: error.message });
